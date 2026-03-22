@@ -17,5 +17,6 @@ object Appenders {
   def consoleAppender(out: PrintWriter): Appender = InternalConsoleAppender(out)
   def consoleAppender(name: String): Appender = InternalConsoleAppender(name)
   def consoleAppender(name: String, out: ConsoleOut): Appender = InternalConsoleAppender(name, out)
-  def consoleAppender(name: String, out: PrintWriter): Appender = InternalConsoleAppender(name, ConsoleOut.printWriterOut(out))
+  def consoleAppender(name: String, out: PrintWriter): Appender =
+    InternalConsoleAppender(name, ConsoleOut.printWriterOut(out))
 }
